@@ -1,0 +1,31 @@
+body {
+    background: #535050; 
+}
+
+.keys{
+    padding:200px 0px 0px 160px;
+}
+
+.key{
+    border:2px solid rgb(20, 160, 20);
+    margin:2px;
+    height:50px;
+    width:30px;
+    display: inline-block;
+    transition: all 0.08s;
+    font-size:18px;
+    text-align: center;
+    color: rgb(243, 232, 232);
+}
+
+span{
+    font-size:12px; 
+}
+
+.playing {
+    transform:scale(1.4);
+    border-color:gold;
+    box-shadow: 0 0 10px gold;
+}
+
+
