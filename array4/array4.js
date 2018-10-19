@@ -52,11 +52,19 @@
 //******************************************************** */
 //Q6
 
-let category = document.querySelector('.mw-category')
-let links = Array.from(category.querySelectorAll('a'));
+// let category = document.querySelector('.mw-category')
+// let links = Array.from(category.querySelectorAll('a'));
 
-let de = links
-            .map(link => link.textContent)
-            .filter(streetName => streetName.includes('de'));
+// let de = links
+//             .map(link => link.textContent)
+//             .filter(streetName => streetName.includes('de'));
 
+//************************************************************* */
+//Q7
 
+const alpha = people.sort(function(lastOne, firstOne) {
+    const [last, first] = lastOne.split(',') 
+    const [blast, bfirst] = firstOne.split(',') 
+     return last > blast ? 1 : -1;
+})
+console.log(alpha);
