@@ -62,9 +62,21 @@
 //************************************************************* */
 //Q7
 
-const alpha = people.sort(function(lastOne, firstOne) {
-    const [last, first] = lastOne.split(',') 
-    const [blast, bfirst] = firstOne.split(',') 
-     return last > blast ? 1 : -1;
-})
-console.log(alpha);
+// const alpha = people.sort(function(lastOne, firstOne) {
+//     const [last, first] = lastOne.split(',') 
+//     const [blast, bfirst] = firstOne.split(',') 
+//      return last > blast ? 1 : -1;
+// })
+// console.log(alpha);
+
+//************************************************************ */
+//8
+
+const instances = datas.reduce(function(obj, data){
+    if (!obj[data]){
+        obj[data] = 0;
+    }
+    obj[data] ++
+    return obj
+}, {})
+console.log(instances)
