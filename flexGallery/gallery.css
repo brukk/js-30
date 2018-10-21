@@ -1,1 +1,54 @@
-.panel1 { background-image:url(images/img1.jpg)}
+html{
+    box-sizing: border-box;
+    background: #636057;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    color:white
+  }
+  
+
+.panel1 { background-image:url(images/img1.jpg);background-repeat: no-repeat;background-size: cover}
+.panel2 { background-image:url(images/img2.jpg);background-repeat: no-repeat;background-size: cover}
+.panel3 { background-image:url(images/img3.jpg);background-repeat: no-repeat;background-size: cover}
+.panel4 { background-image:url(images/img4.jpg);background-repeat: no-repeat;background-size: cover}
+.panel5 { background-image:url(images/img5.jpg);background-repeat: no-repeat;background-size: cover}
+
+.panels{
+    display:flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.panel{
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    transition:
+        font-size 0.7s cubic-bezier(0.6, -0.18,0.7,0.11),
+        flex-grow 0.7s cubic-bezier(0.6, -0.18,0.7,0.11),
+}
+
+/* flex children*/
+.panel > * {
+    margin: 0;
+    width:100%;
+    transition:transform 0.5s;
+    flex:1 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.panel.open {
+    font-size:40px;
+    flex:5;
+}
+
+/* to make the first p tags out of screen */
+.panel > *:first-child{transform: translateY(-100%);}
+.panel.open-active > *:first-child{transform: translateY(0%);}
+.panel > *:last-child{transform: translateY(100%);}
+.panel.open-active > *:last-child{transform: translateY(0%);}
