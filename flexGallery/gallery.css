@@ -62,6 +62,6 @@ html{
 .panel > *:last-child{transform: translateY(100%);}
 .panel.open-active > *:last-child{transform: translateY(0%);}
 
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: inherit;
-  }
+} */
